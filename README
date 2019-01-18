@@ -1,0 +1,6 @@
+install_name_tool -change /Library/Frameworks/CydiaSubstrate.framework/CydiaSubstrate @loader_path/libsubstrate.dylib DingTalkHelper.dylib
+unzip dingtalk.ipa -d dingtalk
+cp libsubstrate.dylib DingTalkHelper.dylib dingtalk/Payload/DingTalk.app
+删watch
+
+/path/to/optool install -c load -p "@executable_path/DingTalkHelper.dylib" -t dingtalk/Payload/DingTalk.app/DingTalk
